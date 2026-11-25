@@ -1,0 +1,50 @@
+# Python virtual environments
+venv/
+.venv/
+**/venv/
+**/.venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Frontend build files
+frontend/dist/
+frontend/.vite/
+
+# ChromaDB
+data/chroma_db/*
+!data/chroma_db/.gitkeep
+
+# Uploaded files
+data/uploads/*
+!data/uploads/.gitkeep
+!data/uploads/sample_course.pdf
+
+# SQLite database
+data/cognigraph.db
+data/cognigraph.db-*
+
+# Saved visualizations
+data/saved_visualizations/*
+!data/saved_visualizations/.gitkeep
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+# Temporary and build files
+*.orig
+*.tsbuildinfo
+
