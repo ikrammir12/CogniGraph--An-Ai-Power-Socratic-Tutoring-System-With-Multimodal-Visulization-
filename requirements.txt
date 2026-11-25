@@ -1,0 +1,32 @@
+# --- Core app ---
+streamlit>=1.38.0
+pydantic>=2.7.0
+
+# --- PDF ingestion ---
+pypdf>=4.2.0
+
+# --- RAG / vector store (LangChain-orchestrated, per proposal's Backend spec) ---
+chromadb>=0.5.0
+langchain-core>=1.1.0
+langchain-chroma>=1.1.0
+sentence-transformers>=3.0.0   # used for BGE-M3 embeddings
+
+# --- LLM brain (fine-tuned model path) ---
+torch>=2.2.0
+transformers>=4.42.0
+peft>=0.11.0                   # LoRA adapter loading
+accelerate>=0.31.0
+bitsandbytes>=0.43.0           # 4-bit quantised inference (optional, GPU only)
+
+# --- Optional: hosted-LLM stand-in brains ---
+anthropic>=0.34.0              # optional: ClaudeBrain
+openai>=2.0.0  # Responses API support
+
+# --- Visualization ---
+matplotlib>=3.9.0
+networkx>=3.3                  # knowledge graphs / concept maps
+numpy>=1.26.0
+pandas>=2.2.0
+
+# --- Optional: image concept-art generation (not implemented, see visualization/image_generator.py) ---
+# diffusers>=0.29.0
