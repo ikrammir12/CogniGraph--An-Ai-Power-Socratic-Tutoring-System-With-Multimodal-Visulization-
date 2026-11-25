@@ -1,0 +1,27 @@
+{
+  "name": "cognigraph-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "postbuild": "node scripts/fix-css-asset.mjs"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "katex": "^0.19.0",
+    "lucide-react": "^0.468.0",
+    "mermaid": "^11.4.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "latest",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-math": "^6.0.0",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}

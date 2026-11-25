@@ -1,0 +1,80 @@
+/* CogniGraph Progress dashboard — isolated styles for the live React view. */
+.progressv3{--pr-ink:#120f2e;--pr-violet:#6c5ce7;--pr-mint:#14b8a6;--pr-amber:#f5a524;--pr-coral:#f4647b;--pr-green:#22a06b;--pr-bg:#0b0922;--pr-surface:#15113a;--pr-text:#f1efff;--pr-muted:#a19dcb;--pr-line:#2d2866;display:flex;flex-direction:column;gap:16px;max-width:1180px;margin:0 auto;color:var(--pr-text);font-family:'DM Sans',system-ui,sans-serif}
+.progressv3 *{box-sizing:border-box}
+.progressv3 .pr-hero{position:relative;overflow:hidden;min-height:132px;border-radius:25px;padding:24px 28px;color:#fff;background:radial-gradient(110% 130% at 0% 0%,#3a2d9e,#1b1550 50%,var(--pr-ink));display:flex;align-items:center;justify-content:space-between;gap:20px}
+.progressv3 .pr-hero-lines{position:absolute;inset:0;width:100%;height:100%;opacity:.8;pointer-events:none}
+.progressv3 .pr-hero-copy,.progressv3 .pr-think{position:relative;z-index:1}
+.progressv3 .pr-eyebrow{display:block;color:#bdb5ff;font-size:10px;font-weight:800;letter-spacing:.14em;margin-bottom:8px}
+.progressv3 .pr-hero h1{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:clamp(28px,3.1vw,38px);letter-spacing:-.04em;line-height:1.06;font-weight:800}
+.progressv3 .pr-hero p{margin-top:8px;color:#cfc9ff;font-size:13px;line-height:1.5}
+.progressv3 .pr-think{display:flex;align-items:center;flex:none}
+.progressv3 .pr-person{width:78px;height:88px;flex:none}
+.progressv3 .pr-bubble{width:205px;margin-left:16px;border-radius:18px;padding:11px 13px;border:1px solid rgba(184,175,255,.42);background:rgba(255,255,255,.1)}
+.progressv3 .pr-bubble b{display:block;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:12px;color:#5eead4;margin-bottom:5px}
+.progressv3 .pr-bubble p{font-size:11px;color:#edeaff;margin:0}
+.progressv3 .pr-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.progressv3 .pr-stat{min-width:0;display:flex;align-items:center;gap:11px;border-radius:17px;padding:12px 14px;background:var(--pr-surface);border:1px solid rgba(108,92,231,.06)}
+.progressv3 .pr-stat-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none;background:rgba(108,92,231,.15);color:#8d7ffa}
+.progressv3 .pr-stat strong{display:block;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;line-height:1.05;letter-spacing:-.03em;color:var(--pr-text)}
+.progressv3 .pr-stat span:not(.pr-stat-icon){display:block;margin-top:4px;color:var(--pr-muted);font-size:10.5px;font-weight:600;line-height:1.3}
+.progressv3 .pr-stat-teal{background:#102a3c}.progressv3 .pr-stat-teal .pr-stat-icon{background:#0b3a47;color:#14b8a6}
+.progressv3 .pr-stat-amber{background:transparent;border:1.5px dashed var(--pr-amber)}.progressv3 .pr-stat-amber .pr-stat-icon{background:#36264b;color:var(--pr-amber)}
+.progressv3 .pr-stat-green{background:#102b36}.progressv3 .pr-stat-green .pr-stat-icon{background:#073c3b;color:#22c58b}
+.progressv3 .pr-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr);gap:14px;align-items:start}
+.progressv3 .pr-card{min-width:0;border:1px solid var(--pr-line);border-radius:20px;background:#15113a;padding:15px 16px 16px}
+.progressv3 .pr-card-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;min-width:0}
+.progressv3 .pr-card-icon{width:33px;height:33px;display:grid;place-items:center;border-radius:11px;flex:none}
+.progressv3 .pr-card-head h2{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:14px;letter-spacing:-.02em;line-height:1.2;color:#f1efff}
+.progressv3 .pr-card-head p{font-size:10.5px;color:var(--pr-muted);margin-top:3px}
+.progressv3 .pr-violet{background:rgba(108,92,231,.2);color:#8d7ffa}.progressv3 .pr-green{background:rgba(34,160,107,.18);color:#22c58b}.progressv3 .pr-teal{background:rgba(20,184,166,.16);color:#14b8a6}.progressv3 .pr-amber{background:rgba(245,165,36,.16);color:#f5a524}.progressv3 .pr-coral{background:rgba(244,100,123,.16);color:#f4647b}
+.progressv3 .pr-head-spacer{flex:1}.progressv3 .pr-record-count{background:rgba(108,92,231,.2);color:#c4bcff;border-radius:20px;padding:3px 9px;font-size:10px;font-weight:700}
+.progressv3 .pr-bars{height:150px;display:flex;align-items:stretch;gap:8px;padding-top:6px}
+.progressv3 .pr-day-bar{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;border:0;background:transparent;padding:0 1px 2px;border-radius:9px;color:var(--pr-muted);cursor:pointer}
+.progressv3 .pr-day-bar:focus-visible{outline:2px solid #a99dff;outline-offset:2px}
+.progressv3 .pr-bar-count{font-size:9px;font-weight:700;min-height:12px;color:#a19dcb}
+.progressv3 .pr-bar-track{height:91px;width:100%;display:flex;align-items:flex-end;overflow:hidden;border-radius:8px 8px 4px 4px;background:rgba(108,92,231,.04)}
+.progressv3 .pr-bar-track i{width:100%;min-height:5px;border-radius:8px 8px 4px 4px;background:#302666;transition:height .2s ease,background .2s ease}
+.progressv3 .pr-day-bar:hover .pr-bar-track i,.progressv3 .pr-day-bar.is-selected .pr-bar-track i{background:linear-gradient(180deg,#8d7ffa,#6c5ce7)}
+.progressv3 .pr-day-bar.is-today .pr-bar-track i{background:linear-gradient(180deg,#ffc86b,#f5a524)}
+.progressv3 .pr-day-bar.is-today.is-selected .pr-day-label{color:#fff}
+.progressv3 .pr-day-label{font-size:10px;font-weight:700}
+.progressv3 .pr-day-summary{display:flex;align-items:flex-start;gap:8px;margin-top:9px;padding:9px 11px;background:rgba(108,92,231,.18);border-radius:11px;color:#dcd6ff;font-size:10.5px;line-height:1.5}
+.progressv3 .pr-day-summary svg{flex:none;margin-top:1px;color:#a99dff}
+.progressv3 .pr-quiz-content{display:flex;align-items:center;gap:15px;min-width:0}
+.progressv3 .pr-ring-wrap{width:112px;max-width:42%;flex:none}
+.progressv3 .pr-ring-wrap svg{width:100%;height:auto;display:block;overflow:visible}
+.progressv3 .pr-ring-track{fill:none;stroke:#263c45;stroke-width:11}
+.progressv3 .pr-ring-value{fill:none;stroke:#22a06b;stroke-width:11;stroke-linecap:round;transform:rotate(-90deg);transform-origin:62px 62px;transition:stroke-dashoffset .45s ease}
+.progressv3 .pr-ring-wrap text{fill:#f1efff;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:22px;font-weight:800}
+.progressv3 .pr-quiz-breakdown{min-width:0;flex:1;display:flex;flex-direction:column;gap:7px}
+.progressv3 .pr-result-positive,.progressv3 .pr-result-review{display:flex;align-items:center;gap:10px;border-radius:12px;padding:12px 10px;min-height:56px}
+.progressv3 .pr-result-positive{background:#17333c;color:#22a06b}.progressv3 .pr-result-review{background:#39213f;color:#f4647b}
+.progressv3 .pr-result-positive>svg,.progressv3 .pr-result-review>svg{flex:none}
+.progressv3 .pr-result-positive strong,.progressv3 .pr-result-review strong{display:inline-block;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:20px;line-height:1;margin-right:6px}
+.progressv3 .pr-result-positive span,.progressv3 .pr-result-review span{font-size:10px;font-weight:700;line-height:1.3}
+.progressv3 .pr-attempt-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:7px;margin-top:12px;color:var(--pr-muted);font-size:10px;font-weight:600}
+.progressv3 .pr-unverified{color:#f5c56d}
+.progressv3 .pr-no-attempts{color:var(--pr-muted);font-size:11px;line-height:1.5;margin-top:10px}
+.progressv3 .pr-filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.progressv3 .pr-filter{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border:1px solid var(--pr-line);border-radius:99px;background:#1a1644;color:#b4afd9;font-size:10.5px;font-weight:700;cursor:pointer}
+.progressv3 .pr-filter[aria-pressed="true"]{background:#6c5ce7;border-color:#6c5ce7;color:#fff}
+.progressv3 .pr-filter-question:hover,.progressv3 .pr-filter-question[aria-pressed="true"]{background:#6c5ce7;border-color:#6c5ce7}.progressv3 .pr-filter-quiz:hover,.progressv3 .pr-filter-quiz[aria-pressed="true"]{background:#9c6b18;border-color:#f5a524}.progressv3 .pr-filter-revision:hover,.progressv3 .pr-filter-revision[aria-pressed="true"]{background:#087f78;border-color:#14b8a6}
+.progressv3 .pr-timeline{position:relative;padding-left:2px}
+.progressv3 .pr-event{position:relative;display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,40,102,.55)}.progressv3 .pr-event:last-of-type{border-bottom:0}
+.progressv3 .pr-event-icon{width:33px;height:33px;border-radius:11px;display:grid;place-items:center;flex:none;background:rgba(108,92,231,.18);color:#a99dff}
+.progressv3 .pr-event-quiz .pr-event-icon{background:rgba(245,165,36,.16);color:#f5a524}.progressv3 .pr-event-revision .pr-event-icon{background:rgba(20,184,166,.16);color:#14b8a6}.progressv3 .pr-event-other .pr-event-icon{background:rgba(244,100,123,.15);color:#f4647b}
+.progressv3 .pr-event-body{min-width:0;flex:1}.progressv3 .pr-event-body b{display:block;font-size:11.5px;line-height:1.3;color:#eeeaff}.progressv3 .pr-event-body small{display:block;margin-top:3px;font-size:10.5px;line-height:1.45;color:#b3aed4;overflow-wrap:anywhere}.progressv3 .pr-event-time{display:block;margin-top:4px;font-size:9.5px;color:#8e89b8}
+.progressv3 .pr-timeline-empty{padding:25px 8px;color:var(--pr-muted);font-size:11.5px;line-height:1.6;text-align:center}
+.progressv3 .pr-more{width:100%;border:1px dashed var(--pr-line);border-radius:11px;padding:8px;background:transparent;color:var(--pr-muted);font-size:10.5px;font-weight:700;cursor:pointer}.progressv3 .pr-more:hover{border-color:#8d7ffa;color:#dcd6ff}
+.progressv3 .pr-snapshot-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,40,102,.55)}.progressv3 .pr-snapshot-row:last-of-type{border-bottom:0}
+.progressv3 .pr-snapshot-icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex:none}
+.progressv3 .pr-snapshot-row>span:nth-child(2){flex:1;min-width:0;color:#c3bfdc;font-size:11px;font-weight:600}
+.progressv3 .pr-snapshot-row strong{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:19px;color:#f1efff}
+.progressv3 .pr-revise-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;padding:10px 13px;border:0;border-radius:12px;background:#42253c;color:#ff91a6;font-size:11.5px;font-weight:800;cursor:pointer}.progressv3 .pr-revise-button:hover{background:#f4647b;color:#fff}
+.progressv3 .pr-honesty-note{display:flex;align-items:flex-start;gap:9px;margin-top:12px;padding:10px 11px;border-radius:12px;background:rgba(108,92,231,.14);color:#c2bbea;font-size:10.5px;line-height:1.55}.progressv3 .pr-honesty-note svg{flex:none;color:#a99dff;margin-top:1px}.progressv3 .pr-honesty-note p{margin:0}.progressv3 .pr-honesty-note b{color:#eeeaff}
+.progressv3 .pr-error{padding:12px 14px;border:1px solid rgba(244,100,123,.4);border-radius:12px;background:#39213f;color:#ffb2bf;font-size:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}.progressv3 .pr-error button{border:1px solid rgba(244,100,123,.5);border-radius:9px;background:transparent;color:#fff;padding:6px 10px;font-weight:700;cursor:pointer}
+@media (min-width:1100px){.progressv3 .pr-layout{grid-template-columns:minmax(0,1.2fr) minmax(0,.9fr)}}
+@media (max-width:980px){.progressv3 .pr-layout{grid-template-columns:minmax(0,1fr)}.progressv3 .pr-quiz-content{max-width:520px}}
+@media (max-width:760px){.progressv3 .pr-hero{align-items:flex-start;flex-direction:column;padding:22px;gap:8px}.progressv3 .pr-think{align-self:stretch;justify-content:center}.progressv3 .pr-person{width:65px;height:74px}.progressv3 .pr-bubble{flex:1;max-width:300px}.progressv3 .pr-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.progressv3 .pr-stat{padding:10px;gap:8px}.progressv3 .pr-stat-icon{width:33px;height:33px}.progressv3 .pr-stat strong{font-size:20px}.progressv3 .pr-card{padding:13px}.progressv3 .pr-bars{gap:5px;height:138px}.progressv3 .pr-quiz-content{gap:10px}.progressv3 .pr-result-positive,.progressv3 .pr-result-review{padding:10px 8px;gap:7px}}
+@media (max-width:420px){.progressv3 .pr-stats{grid-template-columns:1fr 1fr}.progressv3 .pr-stat-icon{display:none}.progressv3 .pr-hero h1{font-size:28px}.progressv3 .pr-day-summary{font-size:10px}.progressv3 .pr-result-positive>svg,.progressv3 .pr-result-review>svg{display:none}}
+@media (prefers-reduced-motion:reduce){.progressv3 *{animation:none!important;transition:none!important}}
